@@ -5,11 +5,22 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form>
+        <form onsubmit ="return results ()">
             <label for="name">name : </label><input type="text" name="name" id="name"/>
             <label for="surname">surname : </label><input type="text" name="surname" id="surname"/>
             <label for="city">city : </label><input type="text" name="city" id="city"/>
-            <button  name="validate" id="validate">Validate</button>
+            <button onclick="myFunction()">Validate</button>
+        
         </form>
+
+        <script>
+            function results() {
+                var name = document.getElementById ("name").value;
+                var surname = document.getElementById ("surname").value;
+                var city = document.getElementById ("city").value;
+                document.write("Your details: "+name+" "+surname+", "+city);
+            }
+        </script>
+        
     </body>
 </html>
